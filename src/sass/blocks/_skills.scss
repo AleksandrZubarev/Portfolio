@@ -1,0 +1,87 @@
+.skills {
+    padding-top: 126px;
+    padding-bottom: 126px;
+    &__title {
+        position: relative;
+        text-align: center;
+       @include before_circle;
+       &:before {
+           top: -5px;
+           left: 50%;
+           transform: translateX(-50%);
+       }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    .divider {
+        margin: 25px auto 0 auto;
+    }
+    &__wrapper {
+        padding: 60px 10px 120px 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        gap: 13px;
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid #000;
+        &-descr {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-descr-margin {
+            margin-top: 46px;
+        }
+        &-descr-marg {
+            margin-top: 39px;
+        }
+        &-text {
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        column-gap: 45px;
+        row-gap: 30px;
+    }
+    &__protsent {
+        &-item {
+            display: flex;
+            height: 36px;
+            justify-content: space-between;
+        }
+        &-title {
+            position: relative;
+            padding-left: 12px;
+            padding-top: 7px;
+            @include before_circle;
+            &:before {
+                top: 0;
+            }
+        }
+        &-num {
+            padding-top: 7px;
+        }
+        &-divider {
+            margin-top: 20px;
+            width: 350px;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+        }
+        &-div1 {
+            background: $main-color;
+            height: 100%;
+            border-radius: 4px;
+        }
+        
+    }
+}
