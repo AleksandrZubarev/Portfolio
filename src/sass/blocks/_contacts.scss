@@ -8,6 +8,7 @@
         justify-content: space-between;
     }
     &__photo {
+        padding-top: 30px;
         img {
             width: 100%;
         }
@@ -31,6 +32,9 @@
     }
     &__link {
         margin-right: 25px;
+        &:hover {
+            text-decoration: none;
+        }
         img {
             max-width: 30px;
             max-height: 30px;

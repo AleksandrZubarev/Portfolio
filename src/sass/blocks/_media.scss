@@ -1,4 +1,4 @@
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
     .sidepanel {
         display: none;
     }
@@ -10,11 +10,43 @@
     .sidepanel {
         display: none;
     }
+    .about {
+        &__wrapper {
+            grid-template-columns: 400px 520px;
+            column-gap: 40px;
+        }
+        &__skils {
+            grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 250px); 
+            column-gap: 20px;
+            &-item {
+                grid-template-columns: 40px 195px;
+                column-gap: 15px;
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__skils {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px,auto); 
+            &-item {
+                grid-template-columns: 40px 320px;
+                column-gap: 20px;
+            }
+        }
     }
 }
 
@@ -29,11 +61,33 @@
         }
     }
     .promo {
+        
         &__title {
             width: 372px;
             line-height: 39px;
         }
+        
     }
+    .about {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 340px auto auto / 100%;
+        }
+        &__photo {
+            grid-row: unset;
+            img {
+                max-height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__skils {
+            grid-template-columns: repeat(2, 260px);
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
+            }
+        }
+    }    
 }
 
 @media (max-width: 576px) {
@@ -56,6 +110,9 @@
             font-size: 20px;
             line-height: 30px;
         }
+        &_fz36 {
+            font-size: 24px;
+        }
     }
     .humburger {
         right: 20px;
@@ -64,6 +121,14 @@
         &__block {
             width: 250px;
             padding-left: 20px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template: 340px auto auto / 1fr;
+        }
+        &__skils {
+            grid-template-columns: 1fr;
         }
     }
 }
